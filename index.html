@@ -202,7 +202,6 @@ function show(){
 
         list.innerHTML += `
         <div class='card'>
-            <i class="fas fa-edit edit-icon" onclick="editMember(${m.id})"></i>
             <div style="display:flex; justify-content:space-between; margin-left:25px; flex-direction:row-reverse;">
                 <b>${m.name}</b>
                 <div>
@@ -220,8 +219,9 @@ function show(){
             </div>
             <div class="info-line">⏳ Remaining: ${diff} Days</div>
             <div style="display:flex; gap:5px;">
-                <button class='smallBtn' onclick='renew(${m.id}, ${m.end})'>Renew</button>
+                <button class='smallBtn' onclick='renew(${m.id}, ${m.end})'>Renew</button>              
                 <button class='smallBtn' style="background:#ff4444; color:white;" onclick='del(${m.id})'>Delete</button>
+<button class='smallBtn' style="background:#007bff; color:white;" onclick="editMember(${m.id})">Edit</button>
             </div>
         </div>`;
     });
